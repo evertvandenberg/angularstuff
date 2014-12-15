@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <script src="angular.js"></script>
+        <script src="MyController.js"></script>
+        <script src="jquery.min.js"></script>
+        <script src="bootstrap.js"></script>
+    </head>
+    <body ng-app="MyApp">
+        <div>TODO write content</div>
+        <div ng-controller="MainCtrl">
+            <input type="text" name="fname" ng-model="info.name">
+            <input type="text" name="fname" ng-model="scopevalue">
+            
+            <button type="button" class="btn btn btn-primary">Primary</button>
+            
+            
+            {{awesomeThings}}
+            {{inputvalue}}
+            </br>
+            start directive with info scope: <br />
+            <my-customer info="info"></my-customer>
+            <br />
+            start directive with info scope: <br />
+            <my-customer></my-customer>
+             <br />
+            start directive 2: <br />
+            <my-customer2 info="{{info.name}}"></my-customer2>
+            <br />
+
+            <div hellotransclude>Bob</div>
+
+            <helloreplace></helloreplace>
+
+            Scope1:
+            <scope1 name="bladie bla"></scope1>
+            <scope1 name="{{scopevalue}}"></scope1>
+
+            Scope2: {{scopevalue}}
+            <scope2 name="scopevalue"></scope2>
+            
+            Scope2 (iban): {{info2.iban}}
+            <scope2 name="info2.iban"></scope2>
+            
+        </div>
+    </body>
+</html>
